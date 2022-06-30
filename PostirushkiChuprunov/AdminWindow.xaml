@@ -1,0 +1,39 @@
+﻿<Window x:Name="AdminWindow1" x:Class="PostirushkiChuprunov.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PostirushkiChuprunov"
+        mc:Ignorable="d"
+        Title="Postirushki" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Width="800" Height="435" Background="#FFDEDEDE">
+        <Button x:Name="AddStaffButton" Width="138" Height="29" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="652,0,0,363" Content="Добавить сотрудника" Click="AddStaffButton_click"/>
+        <Grid x:Name="OtchetGrid" Margin="0,70,0,0" Width="780" Height="350" Background="White" Visibility="Visible">
+            <Grid Margin="64,25,0,0" Width="150" Height="150" Background="#FFB9B9B9" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <TextBlock x:Name="AmountDoneText" Text="Количество готовых" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"></TextBlock>
+            </Grid>
+            <Grid Margin="540,25,0,0" Width="150" Height="150" Background="#FFB9B9B9" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <TextBlock x:Name="FullPriceText" Text="Общая сумма" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"></TextBlock>
+            </Grid>
+            <Button x:Name="otchetbutton" Width="100" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,30" Content="Сохранить отчет" Click="otchetbutton_Click_1"></Button>
+        </Grid>
+        <Grid x:Name="AddStaffGrid" Width="400" Height="435" Background="#FFA7A7A7" Visibility="Hidden">
+            <Label Content="Добавить сотрудника" Width="170" Height="50" FontSize="15" FontWeight="Bold" VerticalAlignment="Top"></Label>
+            <Label Content="Фамилия" Width="170" Height="30" FontSize="12" FontWeight="Normal" VerticalAlignment="Top" Margin="115,25,115,0"></Label>
+            <Label Content="Имя" Width="170" Height="30" FontSize="12" FontWeight="Normal" VerticalAlignment="Top" Margin="115,93,115,0"></Label>
+            <Label Content="Отчество" Width="170" Height="30" FontSize="12" FontWeight="Normal" VerticalAlignment="Top" Margin="115,158,115,0"></Label>
+            <Label Content="Логин" Width="170" Height="30" FontSize="12" FontWeight="Normal" VerticalAlignment="Top" Margin="115,224,115,0"></Label>
+            <Label Content="Пароль" Width="170" Height="30" FontSize="12" FontWeight="Normal" VerticalAlignment="Top" Margin="115,284,115,0"></Label>
+            <TextBox x:Name="SurnameText" HorizontalAlignment="Center" Margin="0,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Height="30" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
+            <TextBox x:Name="NameText" HorizontalAlignment="Center" Margin="0,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Height="30" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
+            <TextBox x:Name="PatrText" HorizontalAlignment="Center" Margin="0,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Height="30" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
+            <TextBox x:Name="LoginText" HorizontalAlignment="Center" Margin="0,254,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Height="30" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
+            <TextBox x:Name="PassText" HorizontalAlignment="Center" Margin="0,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Height="30" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
+            <CheckBox x:Name="IsAdminBox" Content="Добавить с ролью администратора" HorizontalAlignment="Center" Margin="0,367,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="AddStaffBG" Content="Добавить" HorizontalAlignment="Center" Margin="0,387,0,0" VerticalAlignment="Top" Height="28" Width="100" Click="AddStaffBG_Click"/>
+
+
+        </Grid>
+
+    </Grid>
+</Window>

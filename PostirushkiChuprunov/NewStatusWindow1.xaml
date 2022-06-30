@@ -1,0 +1,14 @@
+﻿<Window x:Class="PostirushkiChuprunov.NewStatusWindow1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PostirushkiChuprunov"
+        mc:Ignorable="d"
+        Title="NewStatusWindow1" Height="200" Width="200" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FFDEDEDE">
+        <Button x:Name="ChoosestatusButton" Content="Изменить статус" HorizontalAlignment="Center" Margin="0,142,0,0" VerticalAlignment="Top" Click="ChoosestatusButton_Click"/>
+        <ComboBox x:Name="StatusBox" HorizontalAlignment="Center" Margin="0,60,0,0" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>

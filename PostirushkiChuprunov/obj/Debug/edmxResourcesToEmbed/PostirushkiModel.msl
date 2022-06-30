@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище PostirushkiBDModelContainer" CdmEntityContainer="PostirushkiBDEntities1">
+    <EntitySetMapping Name="ActiveWash">
+      <EntityTypeMapping TypeName="PostirushkiBDModel.ActiveWash">
+        <MappingFragment StoreEntitySet="ActiveWash">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idmachine" ColumnName="idmachine" />
+          <ScalarProperty Name="idpowder" ColumnName="idpowder" />
+          <ScalarProperty Name="drying" ColumnName="drying" />
+          <ScalarProperty Name="IDStaff" ColumnName="IDStaff" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Person">
+      <EntityTypeMapping TypeName="PostirushkiBDModel.Person">
+        <MappingFragment StoreEntitySet="Person">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Patr" ColumnName="Patr" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="PostirushkiBDModel.Roles">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="rolename" ColumnName="rolename" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Services">
+      <EntityTypeMapping TypeName="PostirushkiBDModel.Services">
+        <MappingFragment StoreEntitySet="Services">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

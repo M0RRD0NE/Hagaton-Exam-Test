@@ -1,0 +1,53 @@
+﻿<Window x:Name="AddWashWin" x:Class="PostirushkiChuprunov.AddWashWindow1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PostirushkiChuprunov"
+        mc:Ignorable="d"
+        Title="AddWashWindow1" Height="320" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+
+    <Grid Background="#FFDEDEDE" Width="400" Height="305">
+
+        <Label x:Name="MachineLabel" Content="" HorizontalAlignment="Center" Margin="0,61,0,0" VerticalAlignment="Top" BorderBrush="Black" Background="White" Foreground="Black" Width="236" Height="26"/>
+        <Button x:Name="MachineButton" Content="6" HorizontalAlignment="Right" Margin="0,61,80,0" VerticalAlignment="Top" Height="26" Width="42" FontFamily="Webdings" FontSize="22" FontWeight="Normal" FontStyle="Normal" BorderBrush="White" Click="MachineButton_Click"/>
+        <Label x:Name="PowderLabel" Content="" HorizontalAlignment="Center" Margin="0,120,0,0" VerticalAlignment="Top" BorderBrush="Black" Background="White" Foreground="Black" Width="236" Height="26"/>
+        <Button x:Name="PowderButton" Content="6" HorizontalAlignment="Right" Margin="0,120,80,0" VerticalAlignment="Top" Height="26" Width="42" FontFamily="Webdings" FontSize="22" FontWeight="Normal" FontStyle="Normal" BorderBrush="White" Click="PowderButton_Click"/>
+        <Button x:Name="addWash" Content="Добавить стирку" HorizontalAlignment="Center" Margin="0,0,0,30" VerticalAlignment="Bottom" Click="addWash_Click"/>
+        <Grid x:Name="MachineGrid" Width="200" Height="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="152,87,0,0" Background="White" Visibility="Hidden">
+            <ListBox Name="MachineListSourse" >
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding id}"></TextBlock>
+                            <TextBlock Text=". " ></TextBlock>
+                            <TextBlock Text="{Binding Name}"></TextBlock>
+                            <TextBlock Text=" ("></TextBlock>
+                            <TextBlock Text ="{Binding Price}"></TextBlock>
+                            <Button Name="ChooseMachine" Content="Выбрать" Click="ChooseMachine_Click"></Button>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+        <Grid x:Name="PowGrid" Width="200" Height="150" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="152,146,0,0" Background="White" Visibility="Hidden">
+            <ListBox Name="PowListSourse" >
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding id}"></TextBlock>
+                            <TextBlock Text=". " ></TextBlock>
+                            <TextBlock Text="{Binding Name}"></TextBlock>
+                            <TextBlock Text=" ("></TextBlock>
+                            <TextBlock Text ="{Binding Price}"></TextBlock>
+                            <Button Name="ChoosePow" Content="Выбрать" Click="ChoosePow_Click"></Button>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+        <CheckBox x:Name="SushkaCheck" Content="Сушка" HorizontalAlignment="Left" Margin="82,172,0,0" VerticalAlignment="Top" Width="71" Height="15"/>
+        <Label Content="Номер Стиральной Машины" HorizontalAlignment="Center" Margin="0,35,0,0" VerticalAlignment="Top" Width="168" Height="26"/>
+        <Label Content="Порошок" HorizontalAlignment="Center" Margin="0,94,0,0" VerticalAlignment="Top" Width="63" Height="26"/>
+    </Grid>
+</Window>
